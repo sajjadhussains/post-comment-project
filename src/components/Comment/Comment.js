@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './Comment.css';
 import EmailIcon from '@material-ui/icons/Email';
-
+import data from '../../FakeData/Data.json';
 const Comment = () => {
     const{postId}=useParams();
     const [comment,setComment]=useState([]);
@@ -12,12 +12,13 @@ const Comment = () => {
         .then(res=>res.json())
         .then(data=>setComment(data))
     },[])
+
     return (
         <div>
             {
                 comment.map(comments=>
                     <div>
-                        <p><span>{comments.name}</span> {comments.body}</p>
+                        <p><span className="Commentors">{comments.name}</span> {comments.body}</p>
                 <p><EmailIcon></EmailIcon>{comments.email}</p>
                     </div>
                     )
