@@ -1,0 +1,10 @@
+.PostStyle{
+    border:1px solid #9a0036;
+    margin:40px;
+    padding:40px;
+    border-radius:20px;
+}
+
+.post-detail{
+    font-size:25px;
+}
